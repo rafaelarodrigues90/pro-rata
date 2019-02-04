@@ -1,0 +1,32 @@
+{
+  "name": "prorata-dev",
+  "version": "1.0.0",
+  "description": "calculadora de boleto pro rata",
+  "main": "prorata.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelarodrigues90/prorata-dev.git"
+  },
+  "author": "Rafaela Rodrigues",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaelarodrigues90/prorata-dev/issues"
+  },
+  "homepage": "https://github.com/rafaelarodrigues90/prorata-dev#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-cssbeautify": "^1.0.1",
+    "gulp-csslint": "^1.0.1",
+    "gulp-csslint-report": "^2.0.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-uglyfly": "^1.4.2",
+    "jshint": "^2.9.7"
+  },
+  "dependencies": {
+    "gulp-beautify": "^2.0.1",
+    "gulp-eslint": "^5.0.0"
+  }
+}

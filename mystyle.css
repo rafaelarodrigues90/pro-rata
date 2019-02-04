@@ -1,0 +1,67 @@
+body {
+    background: url("../images/background/finance.jpeg");
+    background-size: auto;
+    border-radius: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container-fluid {
+    align-items: center;
+    display: flex;
+    height: 10em;
+    justify-content: center;
+    left: 50%;
+    margin: 0;
+    margin-right: -50%;
+    position: relative;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bottom {
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.calc {
+    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.dropdown-item-text {
+    border-radius: 5px;
+    max-width: 275px;
+}
+
+.data {
+    max-width: 275px;
+}
+
+.img-browser {
+    align-content: center;
+    height: 400px;
+    width: 250px;
+}
+
+.modal-content {
+    width: 350px;
+}
+
+.modal-body {
+    align-self: center;
+}
+
+.icon {
+    height: 25px;
+    margin-right: 10px;
+    width: 25px;
+}

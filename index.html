@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Gerador de Pro Rata</title>		
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+		<!-- css -->
+		<link rel="stylesheet" href="mystyle.css">
+
+		<!-- função prorata + json -->
+		<script src="prorata.js"></script>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+		<!-- wpa manifest -->
+		<link rel="manifest" href="manifest.json">
+
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="application-name" content="Pro rata">
+		<meta name="apple-mobile-web-app-title" content="Pro rata">
+		<meta name="msapplication-starturl" content="https://rafaelarodrigues90.github.io/prorata/">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	</head>
+
+	<body>
+		<div class="bottom container-fluid col-xs-4 col-sm-6 col-md-8 col-lg-12 col-xl-12"><br>
+			<div class="title container col-lg-3">
+
+				<br><h2>Calculadora Pro Rata</h2><br>
+
+				<div class="calc col-xs-4 col-sm-6 col-md-10 col-lg-12"><br>	
+						
+					<!-- Lista de grupos -->
+					<h6>Grupo</h6> 
+					<select class="dropdown-item-text" id="Grupo" label="REGIÕES"></select><br>
+					
+					<!-- calendário -->
+					<h6>Data da adesão</h6>
+					<input class="data form-control" type="date" id="data" min="1" max="31"><br>
+					
+					<!-- Botão calcular -->
+					<button class="btn btn-primary btn-md btn-block" onclick="prorata()" value="Calcular">Calcular</button><br>
+					
+				</div><br>
+			</div>
+		</div>	
+
+		<!-- Button trigger modal -->
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+			Baixa App
+		</button>
+
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Como adicionar na tela inicial</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					</div>
+
+					<div class="modal-body">
+						<div class="dropdown">
+							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Selecione seu navegador:
+							</button>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+								<button class="dropdown-item" type="button" data-toggle="modal" data-target="#chrome">Chrome</button>
+								<button class="dropdown-item" type="button" data-toggle="modal" data-target="#firefox">Firefox</button>
+								<button class="dropdown-item" type="button" data-toggle="modal" data-target="#opera">Opera</button>
+								<button class="dropdown-item" type="button" data-toggle="modal" data-target="#safari">Safari</button>
+							</div>
+
+							<!-- chrome -->
+							<div class="modal fade" id="chrome" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<img class="icon" src="images/icons/chrome-img.png">
+											<h5>Google Chrome</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<p><img class="img-browser" src="images/tutorial/chrome.jpg"></p>
+											<p><img class="img-browser" src="images/tutorial/chrome1.jpg"></p>
+											<p><img class="img-browser" src="images/tutorial/chrome2.jpg"></p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Firefox -->
+							<div class="modal fade" id="firefox" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<img class="icon" src="images/icons/firefox-img.png">
+											<h5>Firefox</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<p><img class="img-browser" src="images/tutorial/firefox.jpg"></p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Opera -->
+							<div class="modal fade" id="opera" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<img class="icon" src="images/icons/opera-img.png">
+											<h5>Opera</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<p><img class="img-browser" src="images/tutorial/opera1.jpg"></p>
+											<p><img class="img-browser" src="images/tutorial/opera2.jpg"></p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Safari -->
+							<div class="modal fade" id="safari" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<img class="icon" src="images/icons/safari-img.png">	
+											<h5>Safari</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<p><img class="img-browser" src="images/tutorial/safari1.jpeg"></p>
+											<p><img class="img-browser" src="images/tutorial/safari2.jpeg"></p>
+											<p><img class="img-browser" src="images/tutorial/safari3.jpeg"></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body><br>
+</html>
